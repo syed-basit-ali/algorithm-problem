@@ -4,11 +4,11 @@
  * @return {number[]}
  */
 
-console.log(twoSumUsingJavaScript([2, 7, 11, 15], 9));
-console.log(twoSumUsingJavaScript([3, 2, 4], 6));
-console.log(twoSumUsingJavaScript([3, 3], 6));
+console.log(twoSum([2, 7, 11, 15], 9));
+console.log(twoSum([3, 2, 4], 6));
+console.log(twoSum([3, 3], 6));
 
-function twoSumUsingJavaScript(nums, target) {
+export function twoSum(nums, target) {
   for (let row = 0; row < nums.length; row++) {
     for (let col = row; col < nums.length; col++) {
       if (col !== row) {
