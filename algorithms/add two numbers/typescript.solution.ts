@@ -7,7 +7,7 @@ class ListNode {
   }
 }
 
-function addTwoNumbers(
+export function addTwoNumbers(
   l1: ListNode | null,
   l2: ListNode | null
 ): ListNode | null {
@@ -25,8 +25,8 @@ function addTwoNumbers(
   }
 
   const sum: string = (BigInt(l1String) + BigInt(l2String)).toString();
-
   let head: ListNode | null = null;
+
   for (let i = sum.length - 1; i >= 0; i--) {
     const newNode: ListNode = new ListNode(~~sum[i]);
     if (head) {
@@ -39,5 +39,6 @@ function addTwoNumbers(
     }
     head = newNode;
   }
+
   return head;
 }
