@@ -6,6 +6,7 @@
 export function lengthOfLongestSubstring(s) {
   let temp = "";
   let maxLength = 0;
+
   for (let i = 0; i < s.length; i++) {
     if (temp.includes(s[i])) {
       let j = i - 1;
@@ -22,5 +23,6 @@ export function lengthOfLongestSubstring(s) {
       }
     }
   }
+  
   return maxLength;
 }
