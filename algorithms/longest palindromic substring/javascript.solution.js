@@ -16,9 +16,7 @@ function longestPalindrome(s) {
   };
 
   const value = s;
-  if (!value || value.length < 1) {
-    return "";
-  }
+  if (!value || value.length < 1) return "";
 
   let start = 0;
   let end = 0;
