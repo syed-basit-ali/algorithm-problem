@@ -4,8 +4,8 @@
  */
 
 function reverse(x) {
-  const regex = /\d+/;
   let sign;
+  const regex = /\d+/;
   let modified = "";
 
   const strNumber = x.toString();
@@ -19,18 +19,12 @@ function reverse(x) {
   }
 
   let finalNumber;
-  if (sign) {
-    finalNumber = `${sign}${modified}`;
-  } else {
-    finalNumber = modified;
-  }
+  if (sign) finalNumber = `${sign}${modified}`;
+  else finalNumber = modified;
 
   const higherLimit = Math.pow(2, 31);
   const lowerLimit = Math.pow(-2, 31);
 
-  if (finalNumber > higherLimit || finalNumber < lowerLimit) {
-    return 0;
-  } else {
-    return finalNumber;
-  }
+  if (finalNumber > higherLimit || finalNumber < lowerLimit) return 0;
+  return finalNumber;
 }
