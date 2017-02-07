@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
-var isPalindrome = function (x) {
+function isPalindrome(x) {
   const value = x.toString();
 
   let reversed = "";
@@ -15,4 +15,4 @@ var isPalindrome = function (x) {
     return true;
   }
   return false;
-};
+}
