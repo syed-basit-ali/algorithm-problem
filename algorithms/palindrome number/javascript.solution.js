@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
-function isPalindrome(x) {
+export function isPalindrome(x) {
   const value = x.toString();
 
   let reversed = "";
@@ -11,8 +11,6 @@ function isPalindrome(x) {
     reversed += value[i];
   }
 
-  if (value.toString() === reversed.toString()) {
-    return true;
-  }
+  if (value.toString() === reversed.toString()) return true;
   return false;
 }
