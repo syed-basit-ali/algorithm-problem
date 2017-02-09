@@ -3,7 +3,7 @@
  * @return {string}
  */
 
-var intToRoman = function (num) {
+function intToRoman(num) {
   const dict = [
     { number: 1000, symbol: "M" },
     { number: 900, symbol: "CM" },
@@ -37,4 +37,4 @@ var intToRoman = function (num) {
     num = num % ~~object.number;
   }
   return result;
-};
+}
