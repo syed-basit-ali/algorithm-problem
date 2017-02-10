@@ -27,14 +27,18 @@ function intToRoman(num) {
     }
     return result;
   };
+
   let result = "";
+
   for (const object of dict) {
     const romanLength = ~~(num / ~~object.number);
+
     if (romanLength > 0) {
       const symbols = getSymbol(romanLength, object.symbol);
       result += symbols;
     }
     num = num % ~~object.number;
   }
+
   return result;
 }
