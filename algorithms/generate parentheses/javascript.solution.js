@@ -3,7 +3,7 @@
  * @return {string[]}
  */
 
-var generateParenthesis = function (n) {
+function generateParenthesis(n) {
   const result = [];
 
   const backtrack = (s, left, right) => {
@@ -12,16 +12,12 @@ var generateParenthesis = function (n) {
       return;
     }
 
-    if (left < n) {
-      backtrack(s + "(", left + 1, right);
-    }
+    if (left < n) backtrack(s + "(", left + 1, right);
 
-    if (right < left) {
-      backtrack(s + ")", left, right + 1);
-    }
+    if (right < left) backtrack(s + ")", left, right + 1);
   };
 
   backtrack("", 0, 0);
 
   return result;
-};
+}
