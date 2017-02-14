@@ -3,7 +3,7 @@
  * @return {string[]}
  */
 
-function generateParenthesis(n) {
+export function generateParenthesis(n) {
   const result = [];
 
   const backtrack = (s, left, right) => {
