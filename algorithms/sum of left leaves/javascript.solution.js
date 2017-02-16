@@ -11,7 +11,7 @@
  * @return {number}
  */
 
-var sumOfLeftLeaves = function (root) {
+function sumOfLeftLeaves(root) {
   const iterate = (node, isLeft) => {
     if (!node) return 0;
 
@@ -21,4 +21,4 @@ var sumOfLeftLeaves = function (root) {
   };
 
   return iterate(root, false);
-};
+}
